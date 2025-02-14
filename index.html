@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Acta de Nacimiento</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        main {
+            background: white;
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 700px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            color: #800000;
+            font-size: 22px;
+        }
+        p {
+            font-size: 14px;
+            color: #333;
+        }
+        .tabs {
+            display: flex;
+            margin-top: 20px;
+        }
+        .tab-button {
+            flex: 1;
+            padding: 10px;
+            background: #ddd;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .tab-button.active {
+            background: #800000;
+            color: white;
+        }
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .search-form label {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .search-form input, .search-form select {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 14px;
+        }
+        .search-form button {
+            background: #800000;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .search-form button:hover {
+            background: #660000;
+        }
+        .links {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        .links a {
+            display: block;
+            color: #800000;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Gobierno de México
+    </header>
+    <main>
+        <h2>Búsqueda</h2>
+        <p>Puedes realizar la búsqueda del acta de nacimiento por cualquiera de estos métodos:</p>
+        <ol>
+            <li><strong>Con la Clave Única de Registro de Población (CURP).</strong></li>
+            <li><strong>A través de los datos personales.</strong></li>
+        </ol>
+        
+        <div class="tabs">
+            <button class="tab-button active">Clave Única de Registro de Población</button>
+            <button class="tab-button">Datos Personales</button>
+        </div>
+
+        <form class="search-form">
+            <label for="nombre">Nombre(s)*</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre(s)">
+
+            <label for="apellido">Primer Apellido*</label>
+            <input type="text" id="apellido" placeholder="Ingresa tu primer apellido">
+
+            <label for="segundo_apellido">Segundo Apellido</label>
+            <input type="text" id="segundo_apellido" placeholder="Ingresa tu segundo apellido">
+
+            <label for="mes">Mes de Nacimiento*</label>
+            <select id="mes">
+                <option>Selecciona el mes</option>
+            </select>
+
+            <label for="dia">Día de Nacimiento*</label>
+            <select id="dia">
+                <option>Selecciona el día</option>
+            </select>
+
+            <label for="anio">Año de Nacimiento*</label>
+            <input type="text" id="anio" placeholder="Ej. 1943">
+
+            <label for="sexo">Sexo*</label>
+            <select id="sexo">
+                <option>Selecciona el sexo</option>
+            </select>
+
+            <label for="estado">Estado*</label>
+            <select id="estado">
+                <option>Selecciona el estado</option>
+            </select>
+
+            <button type="submit">Buscar</button>
+        </form>
+
+        <div class="links">
+            <a href="#">Consulta el estatus de pago de tu acta de nacimiento</a>
+            <a href="#">Consulta la validez de tu acta de nacimiento</a>
+            <a href="#">Consulta costos por entidad federativa</a>
+            <a href="#">Preguntas frecuentes</a>
+        </div>
+    </main>
+</body>
+</html>
